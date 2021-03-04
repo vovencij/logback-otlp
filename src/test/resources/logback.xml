@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="OTLP" class="io.opentelemetry.logging.logback.OtlpAppender">
+        <url>http://127.0.0.1:4317/</url>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="OTLP" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
