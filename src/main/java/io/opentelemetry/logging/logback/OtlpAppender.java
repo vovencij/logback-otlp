@@ -52,7 +52,7 @@ public class OtlpAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
                         )
                     )
         );
-    System.out.println(client.export(req.build()));
+    client.export(req.build());
   }
 
   private SeverityNumber getSeverity(Level level) {
