@@ -1,6 +1,9 @@
 # logback-otlp
 OTLP Appender for Logback
 
+## Disclaimer
+This an experimental project, do not use in production.
+
 ## Usage
 
 ```xml
